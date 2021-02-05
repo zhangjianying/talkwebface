@@ -27,3 +27,17 @@ cordova plugin add https://github.com/zhangjianying/talkwebface.git
   <preference name="AndroidXEnabled" value="true" />
 ```
 
+
+## 使用说明
+
+```javascript
+TalkwebFacePrinter.startFace({
+        serverUrl: 'http://XXXXXX/talkwebAi/faceRecognition.do',
+        playMusic: 'true', # 是否 发出扫描结果提示 声音
+        vibrator: 'true',  # 是否震动提示
+        userid:'', # 传入userid 表示1:1查找, 否则就是1:N查找
+      },function(ret){
+    alert("成功:"+JSON.stringify(ret));
+   });
+```
+
